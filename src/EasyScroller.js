@@ -102,7 +102,7 @@ EasyScroller.prototype.bindEvents = function() {
 				return;
 			}
 
-			that.scroller.doTouchStart(e.touches, Date.getTime());
+			that.scroller.doTouchStart(e.touches, new Date().getTime());
 			e.preventDefault();
 
 		}, false);
