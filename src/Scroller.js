@@ -518,7 +518,8 @@ var Scroller;
 
 				left = self.__scrollLeft;
 
-			} else {
+			}
+      else {
 
 				if (self.options.paging) {
 					left = Math.round(left / self.__clientWidth) * self.__clientWidth;
@@ -532,7 +533,8 @@ var Scroller;
 
 				top = self.__scrollTop;
 
-			} else {
+			}
+      else {
 
 				if (self.options.paging) {
 					top = Math.round(top / self.__clientHeight) * self.__clientHeight;
@@ -553,6 +555,7 @@ var Scroller;
 				animate = false;
 			}
 
+      $(document).trigger("scrolledTo", [left, top, zoom]);
 			// Publish new values
 			self.__publish(left, top, zoom, animate);
 
